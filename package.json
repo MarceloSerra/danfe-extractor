@@ -1,0 +1,26 @@
+{
+  "name": "danfe-extractor",
+  "version": "1.0.0",
+  "description": "A simple script to extract danfe pdf values",
+  "main": "index.js",
+  "scripts": {
+    "process": "npm run clear && npm run extract && node ./src/scripts/process.js",
+    "extract": "node ./src/scripts/extract.js",
+    "read": "node ./src/scripts/read.js",
+    "read:output": "node ./src/scripts/output.js",
+    "clear": "node ./src/scripts/clear.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "danfe",
+    "pdf",
+    "extractor",
+    "script"
+  ],
+  "author": "marcelo serra",
+  "license": "ISC",
+  "dependencies": {
+    "pdf2json": "^3.1.1"
+  },
+  "type": "module"
+}
