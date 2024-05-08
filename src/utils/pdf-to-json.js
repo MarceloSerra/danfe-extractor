@@ -1,7 +1,7 @@
 import PDFParser from "pdf2json";
 import { getValue } from "../utils/get-value.js";
-import fs from "fs";
 import config from "../config/config.js";
+import { append } from "./append-to-file.js";
 
 const SEARCH_PATTERN = "V.%20TOTAL%20DA%20NOTA";
 
@@ -28,7 +28,8 @@ const load = async (filePath) => {
 	);
 
 	pdfParser.on("pdfParser_dataReady", (pdfData) => {
-		fs.appendFileSync(`${config.dir.output}/temp`, `@${extract(pdfData)}`);
+		const content = `@${extract(pdfData)}`;
+		append(content);
 	});
 
 	await pdfParser.loadPDF(config.dir.input.concat(filePath));
