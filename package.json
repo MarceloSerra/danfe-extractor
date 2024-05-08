@@ -4,12 +4,12 @@
   "description": "A simple script to extract danfe pdf values",
   "main": "index.js",
   "scripts": {
-    "process": "npm run clear && npm run extract && node ./src/scripts/process.js",
+    "process": "npm run clear:output && npm run extract && node ./src/scripts/process.js",
     "extract": "node ./src/scripts/extract.js",
-    "read": "node ./src/scripts/read.js",
-    "read:output": "node ./src/scripts/output.js",
-    "clear": "node ./src/scripts/clear.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "read:temp": "node ./src/scripts/read-temp.js",
+    "read:result": "node ./src/scripts/read-result.js",
+    "clear:output": "node ./src/scripts/clear-output.js",
+    "clear:input": "node ./src/scripts/clear-input.js"
   },
   "keywords": [
     "danfe",

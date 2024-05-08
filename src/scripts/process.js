@@ -5,14 +5,14 @@ import { writeOutput } from "../utils/write-output.js";
 const process = async () => {
 	console.log("Process started...");
 
-	const values = outputValues();
+	const values = outputValues() || [];
 
 	const result = {
 		_metadata: {
 			timestamp: Date.now(),
 		},
 		data: {
-			notes: values.length,
+			notes: values,
 			total: sum(values).toFixed(2),
 		},
 	};

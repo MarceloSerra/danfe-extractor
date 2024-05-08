@@ -1,7 +1,7 @@
 import fs from "fs";
 import config from "../config/config.js";
 
-const clear = () => {
+const clearOutput = () => {
 	console.log("Cleaning started...");
 
 	const TEMP_FILE = `${config.dir.output}/temp`;
@@ -24,4 +24,4 @@ const clear = () => {
 	console.log("Done!");
 };
 
-clear();
+clearOutput();
